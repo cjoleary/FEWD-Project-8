@@ -2,13 +2,13 @@
 /*     Base Styles     */
 /* =================== */
 
-*, 
-*:before, 
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+    *, 
+    *:before, 
+    *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 
 /* ================== */
 /*     Typography     */
@@ -20,42 +20,78 @@
 /*     Grid System     */
 /* =================== */
 
-body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
+    body {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
 
-header {
-    margin: 50px 0 25px;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: header;
-}
+    header {
+        margin: 50px 0 25px;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: header;
+    }
 
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 25px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 25px;
-    padding: 0 25px 25px;
-    grid-area: main;
-}
+    main {
+        width: 90%;
+        max-width: 1000px;
+        margin: 25px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 25px;
+        padding: 0 25px 25px;
+        grid-area: main;
+    }
 
-footer {
-    width: 100%;
-    margin-top: auto;
-    max-height: 100px;
-    text-align: center;
-    padding: 10px;
-    grid-area: footer;
-}
+    footer {
+        width: 100%;
+        margin-top: auto;
+        max-height: 100px;
+        text-align: center;
+        padding: 10px;
+        grid-area: footer;
+    }
+
+/* =================== */
+/*    Modal Overlay    */
+/* =================== */
+
+    .hidden {
+        display: none;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(100, 100, 100, 0.4)
+    }
+
+    .modal {
+        width: 375px;
+        margin: 15% auto auto;
+        position: relative;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #778;
+        border-radius: 5px;
+        padding: 30px 20px;
+    }
+
+    .modal-close {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        cursor: pointer;
+    }
