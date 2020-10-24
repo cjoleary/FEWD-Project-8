@@ -20,6 +20,15 @@
 
     h1 {
         text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
     }
 
 /* =================== */
@@ -50,7 +59,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 25px;
-        padding: 0 25px 25px;
+        padding: 0 25px;
         grid-area: main;
     }
 
@@ -62,6 +71,26 @@
         padding: 10px;
         grid-area: footer;
     }
+
+/* =================== */
+/*     Card Layout     */
+/* =================== */
+
+.card {
+    padding: 20px;
+    border: 3px solid lightgray;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.card p:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
 
 /* =================== */
 /*    Modal Overlay    */
@@ -81,7 +110,7 @@
     }
 
     .modal {
-        width: 375px;
+        width: 300px;
         margin: 15% auto auto;
         position: relative;
         text-align: center;
@@ -111,5 +140,11 @@
 
         h1 {
             text-align: left;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
