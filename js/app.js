@@ -1,4 +1,4 @@
-// global variables
+// GLOBAL VARIABLES
     let employees = [];
     const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,
     email, location, phone, dob &noinfo &nat=US`
@@ -7,13 +7,14 @@
     const modalContainer = document.querySelector(".modal-content");
     const modalClose = document.querySelector(".modal-close");
 
-// fetch data from API
+// FETCH DATA FROM API
     fetch(urlAPI)
         .then(res => res.json())
         .then(res => res.results)
         .then(displayEmployees)
         .catch(err => console.log(err));
 
+// HELPER FUNCTIONS
     function displayEmployees (employeeData) {
         employees = employeeData;
 
@@ -28,7 +29,7 @@
             let picture = employee.picture;
 
             employeeHTML += `
-            <div class="card">
+            <div class="card" data-index="${index}">
                 <img class="avatar" src="${picture.large}" />
                 <div class="text-container">
                     <h2 class="name">${name.first} ${name.last}</h2>
@@ -43,8 +44,8 @@
     }
 
     function displayModal(index) {
-        // use object destructuring make our template literal cleaner
-        let { name, dob, phone, email, location: { city, street, state, postcode}, picture } = employees[index];
+        // use object destructuring make the template literal cleaner
+        let { name, dob, phone, email, location: { city, street, state, postcode }, picture } = employees[index];
 
         let date = new Date(dob.date);
 
@@ -57,7 +58,7 @@
                 <p class="address">${city}</p>
                 <hr />
                 <p>${phone}</p>
-                <p class="address">${street}, ${state} ${postcode}</p>
+                <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
                 <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
             </div>
         `;
@@ -66,7 +67,7 @@
         modalContainer.innerHTML = modalHTML;
     }
 
-// event listeners
+// EVENT LISTENERS
     // activates modal overlay when user clicks on an employee card element
     gridContainer.addEventListener('click', (e) => {
 
