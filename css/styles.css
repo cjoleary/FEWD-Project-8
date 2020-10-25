@@ -57,7 +57,7 @@
         width: 90%;
         margin: 25px auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 25px;
         padding: 0 25px;
         grid-area: main;
@@ -142,9 +142,18 @@
             text-align: left;
         }
 
+        h2 {
+            margin-top: 0;
+        }
+
         .card {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
+            text-align: left;
+        }
+
+        .text-container {
+            padding-left: 20px;
         }
     }
