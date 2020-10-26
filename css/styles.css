@@ -79,8 +79,10 @@
 
 .card {
     padding: 20px;
-    border: 3px solid lightgray;
+    border: 2px solid lightgray;
+    border-radius: 5px;
     text-align: center;
+    word-break: break-all;
 }
 
 .avatar {
@@ -150,7 +152,7 @@
         main {
             margin: 0 auto;
             padding: 25px;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         }
 
         .card {
