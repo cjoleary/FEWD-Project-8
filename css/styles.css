@@ -61,6 +61,7 @@
     }
 
     #search {
+        background-color: whitesmoke;
         border: solid 3px #038690;
         border-radius: 5px;
         padding: 10px;
