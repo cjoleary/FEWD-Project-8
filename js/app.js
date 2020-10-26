@@ -138,6 +138,6 @@
                 // if user input does not match an employee name, hide those employees
                 let card = names[i].parentNode.parentNode;
                 card.style.display = 'none';
-            }
+            } 
         }
     });
