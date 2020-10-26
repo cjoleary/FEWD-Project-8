@@ -239,6 +239,10 @@
         .card .text-container {
             padding-left: 20px;
         }
+
+        .modal {
+            top: 30%;
+        }
     }
 
     @media(min-width: 1024px) {
