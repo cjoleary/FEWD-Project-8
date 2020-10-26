@@ -131,7 +131,7 @@
             let nameText = names[i].innerText;
 
             // if user input matches an employee name, show those employees
-            if( nameText.toLowerCase().indexOf(input) > -1 ){
+            if ( nameText.toLowerCase().indexOf(input) > -1 ) {
                 let card = names[i].parentNode.parentNode;
                 card.style.display = '';
             } else {
