@@ -41,7 +41,7 @@
 /* =================== */
 
     body {
-        background-color: #6E859C;
+        background-color: #3E474F;
         margin: 0 auto;
         position: relative;
         min-height: 100vh;
@@ -61,7 +61,7 @@
     }
 
     #search {
-        border: solid 3px #6e9c9c;
+        border: solid 3px #038690;
         border-radius: 5px;
         padding: 10px;
         width: 80%;
@@ -84,7 +84,7 @@
         text-align: center;
         padding: 10px;
         grid-area: footer;
-        background-color: #6e9c9c;
+        background-color: #038690;
     }
 
     footer p {
@@ -98,7 +98,7 @@
 
 .card {
     padding: 20px;
-    border: 3px solid #6E9C9C;
+    border: 3px solid #038690;
     border-radius: 5px;
     background-color: whitesmoke;
     text-align: center;
@@ -142,7 +142,7 @@
         position: relative;
         text-align: center;
         background: #fff;
-        border: 3px solid #6E9C9C;
+        border: 3px solid #038690;
         border-radius: 5px;
         padding: 30px 20px;
     }
