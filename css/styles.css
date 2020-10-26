@@ -16,11 +16,14 @@
 
     body {
         font-family: 'Lato', sans-serif;
+        color: #222;
     }
 
     h1 {
         text-transform: uppercase;
         font-size: 24px;
+        color: whitesmoke;
+        text-shadow: 1px 1px 2px #222;
     }
 
     h2 {
@@ -29,6 +32,8 @@
 
     p {
         font-size: 12px;
+        margin: 8px 0;
+        color: grey;
     }
 
 /* =================== */
@@ -36,6 +41,7 @@
 /* =================== */
 
     body {
+        background-color: #6E859C;
         margin: 0 auto;
         position: relative;
         min-height: 100vh;
@@ -48,10 +54,17 @@
     }
 
     header {
-        margin: 50px auto 25px;
+        margin: 25px auto;
         text-align: center;
         width: 90%;
         grid-area: header;
+    }
+
+    #search {
+        border: solid 3px #6e9c9c;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80%;
     }
 
     main {
@@ -66,11 +79,17 @@
 
     footer {
         width: 100%;
-        margin-top: auto;
-        max-height: 100px;
+        margin-top: 50px;
+        height: 50px;
         text-align: center;
         padding: 10px;
         grid-area: footer;
+        background-color: #6e9c9c;
+    }
+
+    footer p {
+        color: whitesmoke;
+        font-size: 16px;
     }
 
 /* =================== */
@@ -79,10 +98,15 @@
 
 .card {
     padding: 20px;
-    border: 2px solid lightgray;
+    border: 3px solid #6E9C9C;
     border-radius: 5px;
+    background-color: whitesmoke;
     text-align: center;
     word-break: break-all;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .avatar {
@@ -118,9 +142,21 @@
         position: relative;
         text-align: center;
         background: #fff;
-        border: 1px solid #778;
+        border: 3px solid #6E9C9C;
         border-radius: 5px;
         padding: 30px 20px;
+    }
+
+    .modal h2 {
+        margin-top: 12px;
+    }
+
+    .modal hr {
+        margin: 25px 0;
+    }
+
+    .modal-info p {
+        margin-top: 15px;
     }
 
     .modal-close {
@@ -139,6 +175,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 25px;
+        }
+
+        #search {
+            width: 40%;
         }
 
         h1 {
@@ -162,7 +203,17 @@
             text-align: left;
         }
 
-        .text-container {
+       .card .text-container {
             padding-left: 20px;
+        }
+    }
+
+    @media(min-width: 1024px) {
+        header {
+            margin-top: 50px;
+        }
+
+        #search {
+            width: 25%;
         }
     }
