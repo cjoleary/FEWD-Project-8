@@ -80,7 +80,7 @@
 
     footer {
         width: 100%;
-        margin-top: 50px;
+        margin-top: auto;
         height: 50px;
         text-align: center;
         padding: 10px;
@@ -190,7 +190,7 @@
     }
 
     .arrows p:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 
 /* =================== */
